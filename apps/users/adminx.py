@@ -9,8 +9,8 @@ class BaseSetting(object):
 
 
 class GlobalSettings(object):
-    site_title = "慕学生鲜后台"
-    site_footer = "mxshop"
+    site_title = "商城后台"
+    site_footer = "Github:hj24"
     # menu_style = "accordion"
 
 
