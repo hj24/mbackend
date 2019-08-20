@@ -19,7 +19,7 @@ class UserProfile(AbstractUser):
         verbose_name_plural = verbose_name    # 复数形式
 
     def __str__(self):
-        return self.name
+        return self.username
 
 class VerifyCode(models.Model):
     """
