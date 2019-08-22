@@ -11,6 +11,8 @@ class GoodsCategorySerializer(ModelSerializer):
 
 class GoodsSerializer(ModelSerializer):
 
+    category = GoodsCategorySerializer()
+
     class Meta:
         model = Goods
-        fields = ('name', 'click_num')
+        fields = '__all__'
