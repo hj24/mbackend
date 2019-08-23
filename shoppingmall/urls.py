@@ -18,14 +18,17 @@ from django.views.static import serve
 from rest_framework.documentation import include_docs_urls
 from rest_framework import routers
 
-from goods.views import GoodsListViewSet
 import xadmin
+from goods.views import GoodsListViewSet
+from goods.views import CategoryViewSet
+
 
 from shoppingmall.settings import MEDIA_ROOT
 
 
 routers = routers.DefaultRouter()
-routers.register(r'goods', GoodsListViewSet)
+routers.register(r'goods', GoodsListViewSet, base_name='goods')
+routers.register(r'categorys', CategoryViewSet, base_name='categorys')
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),

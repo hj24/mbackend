@@ -13,6 +13,8 @@ class GoodsListView(View):
     def get(self, request):
         goods = Goods.objects.all()[:10]
 
+        from django.forms.models import model_to_dict
+
         json_list = []
 
         # for good in goods:

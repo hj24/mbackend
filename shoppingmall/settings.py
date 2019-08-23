@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'crispy_forms',
     'xadmin',
     'django_filters',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,6 +136,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 设置允许跨域
+CORS_ORIGIN_ALLOW_ALL = True
 
 # 配置媒体文件存放
 MEDIA_URL = '/media/'
