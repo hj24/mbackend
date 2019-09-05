@@ -108,3 +108,5 @@ class Banner(models.Model):
 
     def __str__(self):
         return self.goods.name
+
+from collections import namedtuple
